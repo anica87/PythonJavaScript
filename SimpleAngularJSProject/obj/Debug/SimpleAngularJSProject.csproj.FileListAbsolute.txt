@@ -1,4 +1,4 @@
-C:\Users\anicam\Documents\Visual Studio 2012\Projects\SimpleAngularJSProject\SimpleAngularJSProject\bin\SimpleAngularJSProject.dll
-C:\Users\anicam\Documents\Visual Studio 2012\Projects\SimpleAngularJSProject\SimpleAngularJSProject\bin\SimpleAngularJSProject.pdb
-C:\Users\anicam\Documents\Visual Studio 2012\Projects\SimpleAngularJSProject\SimpleAngularJSProject\obj\Debug\SimpleAngularJSProject.dll
-C:\Users\anicam\Documents\Visual Studio 2012\Projects\SimpleAngularJSProject\SimpleAngularJSProject\obj\Debug\SimpleAngularJSProject.pdb
+C:\Users\anicam\documents\visual studio 2012\Projects\SimpleAngularJSProject\SimpleAngularJSProject\bin\SimpleAngularJSProject.dll
+C:\Users\anicam\documents\visual studio 2012\Projects\SimpleAngularJSProject\SimpleAngularJSProject\bin\SimpleAngularJSProject.pdb
+C:\Users\anicam\documents\visual studio 2012\Projects\SimpleAngularJSProject\SimpleAngularJSProject\obj\Debug\SimpleAngularJSProject.dll
+C:\Users\anicam\documents\visual studio 2012\Projects\SimpleAngularJSProject\SimpleAngularJSProject\obj\Debug\SimpleAngularJSProject.pdb

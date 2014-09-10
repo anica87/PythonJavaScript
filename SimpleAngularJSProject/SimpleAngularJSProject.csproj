@@ -14,7 +14,7 @@
     <RootNamespace>SimpleAngularJSProject</RootNamespace>
     <AssemblyName>SimpleAngularJSProject</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -60,6 +60,7 @@
     <Content Include="App\app.js" />
     <Content Include="App\controllers\aboutController.js" />
     <Content Include="App\controllers\homeController.js" />
+    <Content Include="App\css\StyleSheetDefaut.css" />
     <Content Include="App\Index.html" />
     <Content Include="App\views\about.html" />
     <Content Include="App\views\home.html" />
@@ -361,7 +362,9 @@
     <Content Include="Scripts\i18n\angular-locale_zh.js" />
     <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -399,9 +402,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>53616</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:52980/</IISUrl>
+          <IISUrl>http://localhost/SimpleAngularJSProject</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
