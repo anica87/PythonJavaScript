@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+	<link href="assets/css/styles.css" rel="stylesheet" />
+       <!--  <meta charset="utf-8"/>
+        <title>Your First AngularJS App</title>
+
+        Google web fonts
+        <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel='stylesheet' />
+
+        The main CSS file
+        <link href="assets/css/style.css" rel="stylesheet" /> -->
+    </head>
+
+    <body ng-app="instantSearch">
+		<div id="directive">
+			<!-- The navigation menu will get the value of the "active" variable as a class.
+				The $event.preventDefault() stops the page from jumping when a link is clicked. 
+			-->
+			<nav class="{{active}}" ng-click="$event.preventDefault()">
+				<a href="#" class="home" ng-click="active='home'">Home</a>
+				<a href="#" class="projects" ng-click="active='projects'">Projects</a>
+				<a href="#" class="services" ng-click="active='services'">Services</a>
+				<a href="#" class="contact" ng-click="active='contact'">Contact</a>
+			</nav>
+			<!-- ng-show will show an element if the value in the quotes is truthful, while ng-hide does the opposite.
+				Because the active variable is not set initially, this will cause the first paragraph to be visible.
+			-->
+			<p ng-hide="active">Please click a menu item</p>
+			<p ng-show="active">You chose <b>{{active}}</b></p>
+			
+		</div>
+		
+		<div id="module" ng-controller="InstantSearchController">
+			<!-- Creating a binding between the searchString model and the text field
+			-->
+			<div>
+			<input type="text" ng-model="searchString" placeholder="Enter your search terms" />
+			</div>
+			
+			<ul>
+				<li ng-repeat="i in items | searchFor:searchString">
+					<a href="{{i.url}}"><img ng-src="{{i.image}}" /> </a>
+					<p>{{i.title}}</p>
+				</li>
+			</ul>
+			
+		</div>
+		
+		<div id="controller" ng-controller="InlineEditorController" ng-click="hideTooltip()">
+		<!--
+		-->
+			<div ng-click="$event.stopPropagation()" ng-show="showtooltip">
+			<input type="text" ng-model="value" />
+			</div>
+			<p ng-click="toggleTooltip($event)">{{value}}</p>
+		</div>
+        <form id="main" ng-controller="myservices"> 
+            <h1>My Services</h1>
+
+            <ul id="services"> 
+			<!-- <ul> -->
+                <!-- The services will be inserted here -->
+                <li ng-repeat="service in services">
+                    <label>
+                        <input type="checkbox" ng-model="service.selected" value="1" name="{{service.title}}" />
+                        {{service.title}}<span>${{service.price}}</span>
+                    </label>
+                </li>
+            </ul>
+
+            <p id="total">total: <span>${{total()}}</span></p>
+			
+			 <p id="multiply">multiply: <span>${{multiply()}}</span></p>
+			
+            <input type="submit" id="order" value="Order"/>
+
+        </form>
+		
+		
+		<div ng-controller="SwitchableGridController" id="module2">
+			
+			<div class="bar">
+				<a class="list-icon" ng-class="{active: layout == 'list'}" ng-click="layout= 'list'"></a>
+				<a class="grid-icon" ng-class="{active: layout == 'grid'}" ng-click="layout= 'grid'"></a>
+			</div>
+			<ul ng-show="layout == 'grid'" class="grid">
+				<li ng-repeat="p in pics">
+					<a href={{p.link}} target="_blank"> <img ng-src="{{p.images.low_resolution.url}}" /></a>
+				</li>
+			</ul>
+			
+			<ul ng-show="layout == 'list'" class="list">
+				<li ng-repeat="p in pics">
+					<a href={{p.link}} target="_blank"> <img ng-src="{{p.images.thumbnail.url}}" /></a>
+					<p>{{p.caption.text}}</p>
+				</li>
+			</ul>
+			
+		</div>
+
+        <!-- The single AngularJS include -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.5/angular.min.js"></script> 
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script>
+        <script src="assets/js/script.js"></script> 
+    </body>
+</html>
